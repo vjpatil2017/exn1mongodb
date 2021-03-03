@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exn1</title>
+
+  </head>
+  <body>
+  <div class="container">
+    <h2>Student Data</h2>
+    <ul>
+      <% results.forEach(function(r) { %>
+        <li><%= r.first_name %> - <%= r.last_name %>
+          GPA:(<%=r.gpa %> )
+          year:((<%=r.year %>) </li>
+      <% }); %>
+    </ul>
+  </div>
+  </body>
+</html>
