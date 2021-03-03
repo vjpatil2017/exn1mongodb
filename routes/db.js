@@ -1,3 +1,5 @@
+import {Process as process} from "node/process";
+
 var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
@@ -6,7 +8,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 
 router.get('/', function(req, res, next) {
-  const uri = "mongodb+srv://exn1user:user1@exn1mean.48uvk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  const uri = process.env.MONGODB_URI;
 
   MongoClient.connect(uri, function (err, db) {
     if (err) throw err;
